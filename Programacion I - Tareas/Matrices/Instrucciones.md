@@ -1,5 +1,3 @@
----
-
 # 📌 README.md (versión ultra corta)
 
 # matrices
@@ -17,7 +15,3 @@ Para ejecutar el programa:
 ```
 python3 main.py
 ```
-
----
-
-Si quieres, puedo hacerlo **aún más corto**, tipo 3 líneas.
