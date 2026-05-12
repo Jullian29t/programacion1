@@ -1,5 +1,3 @@
-Listo, Julián. Aquí tienes un **README.md aún más corto**, directo y sin vueltas. Este sí es del tamaño exacto que suelen pedir en Programación I.
-
 ---
 
 # 📌 README.md (versión ultra corta)
