@@ -1,4 +1,4 @@
-# 📌 README.md (versión ultra corta)
+# Instrucciones para ejecutar el codigo
 
 # matrices
 
