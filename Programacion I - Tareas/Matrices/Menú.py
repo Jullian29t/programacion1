@@ -6,11 +6,10 @@ def mostrar_menu():
     print("4. Producto de Kronecker")
     print("5. Salir")
 
-def pedir_opcion():
     while True:
         try:
             opcion = int(input("Seleccione una opción: "))
-            if 1 <= opcion <= 5:
+            if opcion in [1, 2, 3, 4, 5]:
                 return opcion
             else:
                 print("Error: opción no válida.")
