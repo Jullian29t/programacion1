@@ -1,18 +1,66 @@
-def mostrar_menu():
-    print("\n--- MENU DE OPERACIONES CON MATRICES ---")
-    print("1. Suma de matrices")
-    print("2. Multiplicación de matrices")
-    print("3. Producto de Hadamard")
-    print("4. Producto de Kronecker")
-    print("5. Salir")
+#Suma de matrices
+def suma_matrices(A, B):
+    filas = len(A)
+    columnas = len(A[0])
+    if filas != len(B) or columnas != len(B[0]):
+        return "Error, las matrices no tienen las mismas dimensiones."
+    else:
+        resultado = []
+        for i in range(filas):
+            fila = []
+            for j in range(columnas):
+                fila.append(A[i][j] + B[i][j])
+            resultado.append(fila)
+        return resultado
 
-def pedir_opcion():
-    while True:
-        try:
-            opcion = int(input("Seleccione una opción: "))
-            if 1 <= opcion <= 5:
-                return opcion
-            else:
-                print("Error: opción no válida.")
-        except ValueError:
-            print("Error: debe ingresar un número entero.")
+#multiplicacion entre matrices
+def multiplicar_matrices(A, B):
+    filas_A = len(A)
+    columnas_A = len(A[0])
+    filas_B = len(B)
+    columnas_B = len(B[0])
+    # Verificar si se pueden multiplicar
+    if columnas_A != filas_B:
+        return "Error: El número de columnas de A debe ser igual al número de filas de B."
+    resultado = []
+    for i in range(filas_A):
+        fila = []
+        for j in range(columnas_B):
+            suma = 0
+            for k in range(columnas_A):
+                suma += A[i][k] * B[k][j]
+            fila.append(suma)
+        resultado.append(fila)
+    return resultado
+
+#producto hadamard
+def producto_hadamard(A, B):
+    filas = len(A)
+    columnas = len(A[0])
+    if filas != len(B) or columnas != len(B[0]):
+        return "Error: las matrices deben tener las mismas dimensiones"
+
+    resultado = []
+    for i in range(filas):
+        fila = []
+        for j in range(columnas):
+            fila.append(A[i][j] * B[i][j])
+        resultado.append(fila)
+
+    return resultado
+
+#producto kronecker
+def producto_kronecker(A, B):
+    filas_A = len(A)
+    columnas_A = len(A[0])
+    filas_B = len(B)
+    columnas_B = len(B[0])
+    resultado = []
+    for i in range(filas_A):
+        for k in range(filas_B):
+            fila = []
+            for j in range(columnas_A):
+                for l in range(columnas_B):
+                    fila.append(A[i][j] * B[k][l])
+            resultado.append(fila)
+    return resultado
