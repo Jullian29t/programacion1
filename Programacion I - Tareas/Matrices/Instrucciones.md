@@ -1,17 +1,19 @@
-# Instrucciones para ejecutar el codigo
+INSTRUCCIONES PARA USAR LA CALCULADORA DE MATRICES
 
-# matrices
+PASO 0: Asegúrate de tener Python instalado en tu computador. Puedes descargarlo desde la página oficial o usar algún editor como VS Code o PyCharm.
 
-Este programa permite realizar operaciones entre matrices ingresadas por el usuario.  
-El proyecto está dividido en cuatro módulos, cada uno con una función específica.
+PASO 1: Crea una carpeta llamada “Proyecto_matrices” en tu escritorio o en descargas.
 
-- **main.py:** programa principal. Muestra el menú, pide las matrices y ejecuta la operación seleccionada.  
-- **operaciones_matrices.py:** contiene las funciones de suma, multiplicación, producto de Hadamard y producto de Kronecker.  
-- **entrada.py:** permite ingresar matrices desde teclado y mostrarlas. Incluye validación de errores.  
-- **menu.py:** muestra el menú de opciones y valida que el usuario ingrese una opción correcta.
+PASO 2: En el repositorio encontrarás cuatro ramas, cada una con un archivo diferente:
 
-Para ejecutar el programa:
+principal → contiene el archivo main.py (el programa principal)
 
-```
-python3 main.py
-```
+menu → contiene el archivo menu.py
+
+operaciones_matrices → contiene las funciones de operaciones
+
+entrada → contiene el código para ingresar y mostrar matrices
+
+Descarga los cuatro archivos y colócalos dentro de la carpeta “Proyecto_matrices”.
+
+PASO 3: Abre la carpeta y ejecuta el archivo main.py usando Python o el editor que prefieras.
