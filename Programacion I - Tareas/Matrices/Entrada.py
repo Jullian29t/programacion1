@@ -1,26 +1,31 @@
 def ingresar_matriz():
-    """Función para ingresar una matriz por teclado"""
-
-    filas = int(input("Ingrese el número de filas: "))
-    columnas = int(input("Ingrese el número de columnas: "))
+    while True:
+        try:
+            filas = int(input("Ingrese el número de filas: "))
+            columnas = int(input("Ingrese el número de columnas: "))
+            break
+        except ValueError:
+            print("Error: debe ingresar números enteros.")
 
     matriz = []
+    print("Ingrese los elementos de la matriz:")
 
     for i in range(filas):
-        while True:
-            fila = list(map(float, input(f"Ingrese la fila {i+1} separada por espacios: ").split()))
+        fila = []
+        for j in range(columnas):
+            while True:
+                try:
+                    valor = float(input(f"A[{i}][{j}]: "))
+                    fila.append(valor)
+                    break
+                except ValueError:
+                    print("Error: ingrese un número válido.")
+        matriz.append(fila)
 
-            if len(fila) != columnas:
-                print(f"Error: debe ingresar exactamente {columnas} valores.")
-            else:
-                matriz.append(fila)
-                break
     return matriz
 
-def mostrar_matriz(matriz):
-    """Función para mostrar una matriz"""
-    if isinstance(matriz, str):
-        print(matriz)
-        return
-    for fila in matriz:
-        print(" ".join(map(str, fila)))
+
+def mostrar_matriz(A):
+    print("\nMatriz:")
+    for fila in A:
+        print(fila)
