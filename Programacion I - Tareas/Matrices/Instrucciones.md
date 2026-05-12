@@ -1,6 +1,6 @@
 Instrucciones para ejecutar el codigo
 
-PASO 1: Tienes que tener Python instalado en tu computador. Se peuede descargar desde la página oficial o usar algún editor como PyCharm.
+PASO 1: Tiene que tener Python instalado en tu computador. Se peuede descargar desde la página oficial o usar algún editor como PyCharm.
 
 PASO 2: Crear una carpeta llamada “Proyecto_matrices” en tu computador donde prefiera.
 
